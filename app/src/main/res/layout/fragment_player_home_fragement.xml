@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.werunthisleague.baseballleaguemanager.PlayerHomeScreenFragement"
+    android:id="@+id/">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:weightSum="1"
+        android:id="@+id/layout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:id="@+id/home_team_image"
+            android:layout_weight=".33"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="VS"
+            android:id="@+id/versus"
+            android:layout_weight=".33"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:id="@+id/away_team_image"
+            android:layout_weight=".3"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="10-1"
+            android:id="@+id/away_team_text"
+            android:layout_weight=".33"
+            android:textAlignment="center"
+            android:layout_below="@+id/away_team_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="11-0"
+            android:id="@+id/home_team_record"
+            android:layout_weight=".33"
+            android:textAlignment="center"
+            android:layout_alignTop="@+id/away_team_text"
+            android:layout_alignLeft="@+id/home_team_image"
+            android:layout_alignStart="@+id/home_team_image"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

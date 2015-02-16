@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">BaseballLeagueManager</string>
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="home_screen_section">Home Screen</string>
+    <string name="my_profile_section">My Profile</string>
+    <string name="my_team_section">My Team</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -15,4 +15,7 @@
     <string name="title_activity_json">JsonActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
