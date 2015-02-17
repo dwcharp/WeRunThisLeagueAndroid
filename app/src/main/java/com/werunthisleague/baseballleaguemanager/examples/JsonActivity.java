@@ -1,5 +1,6 @@
-package com.werunthisleague.baseballleaguemanager;
+package com.werunthisleague.baseballleaguemanager.examples;
 
+import com.werunthisleague.baseballleaguemanager.R;
 import com.werunthisleague.baseballleaguemanager.util.SystemUiHider;
 
 

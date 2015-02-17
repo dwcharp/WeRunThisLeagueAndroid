@@ -1,4 +1,4 @@
-package com.werunthisleague.baseballleaguemanager;
+package com.werunthisleague.baseballleaguemanager.activity;
 
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
+
+import com.werunthisleague.baseballleaguemanager.R;
+import com.werunthisleague.baseballleaguemanager.frament.NavigationDrawerFragment;
+import com.werunthisleague.baseballleaguemanager.frament.PlayerHomeScreenFragement;
 
 
 public class HomeScreen extends ActionBarActivity
