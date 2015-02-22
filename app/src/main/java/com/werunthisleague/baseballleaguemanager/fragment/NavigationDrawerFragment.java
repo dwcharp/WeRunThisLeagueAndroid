@@ -1,4 +1,4 @@
-package com.werunthisleague.baseballleaguemanager.frament;
+package com.werunthisleague.baseballleaguemanager.fragment;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
@@ -105,7 +105,7 @@ public class NavigationDrawerFragment extends Fragment {
                 android.R.id.text1,
                 new String[]{
                         getString(R.string.home_screen_section),
-                        getString(R.string.my_profile_section),
+                       getString(R.string.game_tracker_section),
                         getString(R.string.my_team_section),
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);

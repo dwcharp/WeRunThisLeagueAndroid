@@ -1,6 +1,7 @@
 package com.werunthisleague.baseballleaguemanager.activity;
 
 import android.net.Uri;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.FragmentManager;
@@ -10,12 +11,14 @@ import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
 
 import com.werunthisleague.baseballleaguemanager.R;
-import com.werunthisleague.baseballleaguemanager.frament.NavigationDrawerFragment;
-import com.werunthisleague.baseballleaguemanager.frament.PlayerHomeScreenFragement;
+import com.werunthisleague.baseballleaguemanager.fragment.GameTrackerFragment;
+import com.werunthisleague.baseballleaguemanager.fragment.NavigationDrawerFragment;
+import com.werunthisleague.baseballleaguemanager.fragment.PlayerHomeScreenFragement;
 
 
 public class HomeScreen extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks, PlayerHomeScreenFragement.OnFragmentInteractionListener {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, PlayerHomeScreenFragement.OnFragmentInteractionListener,
+        GameTrackerFragment.OnFragmentInteractionListener{
 
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private CharSequence mTitle;
@@ -37,10 +40,11 @@ public class HomeScreen extends ActionBarActivity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment frags [] = new Fragment[] {PlayerHomeScreenFragement.newInstance("", ""), GameTrackerFragment.newInstance("",
+                "")};
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlayerHomeScreenFragement.newInstance("", ""))
+                .replace(R.id.container, frags[position])
                 .commit();
     }
 
@@ -50,7 +54,7 @@ public class HomeScreen extends ActionBarActivity
                 mTitle = getString(R.string.home_screen_section);
                 break;
             case 2:
-                mTitle = getString(R.string.my_profile_section);
+                mTitle = getString(R.string.game_tracker_section);
                 break;
             case 3:
                 mTitle = getString(R.string.my_team_section);
@@ -94,7 +98,9 @@ public class HomeScreen extends ActionBarActivity
         return super.onOptionsItemSelected(item);
     }
 
-    public  void onFragmentInteraction(Uri uri) {
+    public void onFragmentInteraction(Uri uri) {
     }
 
+    public void onFragmentInteraction(String uri) {
+    }
 }
